@@ -11,7 +11,7 @@ const page =await context.newPage();  // which creates new page to automate
 await page.goto("https://rahulshettyacademy.com/practice");
 } );
 
-test('Page Playwright Test', async ({page}) =>   // test annotation coming from playwright dependencies
+test.only('Page Playwright Test', async ({page}) =>   // test annotation coming from playwright dependencies
 
 {
 
