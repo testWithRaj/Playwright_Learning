@@ -20,6 +20,6 @@ test('Page Playwright Test', async ({page}) =>   // test annotation coming from 
 await page.goto("https://facebook.com");
 // get title assertion
 console.log(await page.title());
-await expect(page).toHaveTitle("Google");
+await expect(page).toHaveTitle("Facebook");
 
 } );
