@@ -14,4 +14,6 @@ await page.locator("input#username").fill("Raj kumar");
 await page.locator("input#password").fill("password");
 await page.locator("input#signInBtn").click();
 
+console.log(await page.locator("[style*='block']").textContent());
+
 } );
