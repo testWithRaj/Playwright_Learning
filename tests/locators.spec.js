@@ -16,4 +16,7 @@ await page.locator("input#signInBtn").click();
 
 console.log(await page.locator("[style*='block']").textContent());
 
+// adding insertion
+await expect(page.locator("[style*='block']")).toContainText('Incorrect');
+
 } );
