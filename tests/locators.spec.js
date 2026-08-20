@@ -10,13 +10,16 @@ await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
 console.log(await page.title());
 
 // two methods > type and fill >> type is deprecated so please use fill method
-await page.locator("input#username").fill("Raj kumar");
-await page.locator("input#password").fill("password");
+await page.locator("input#username").fill("rahulshettyacademy");
+await page.locator("input#password").fill("Learning@830$3mK2");
 await page.locator("input#signInBtn").click();
 
-console.log(await page.locator("[style*='block']").textContent());
+//console.log(await page.locator("[style*='block']").textContent()); // this line is for extracting error message 
+console.log(await page.locator(".card-body a").first().textContent());
+console.log(await page.locator(".card-body a").nth(1).textContent());
 
 // adding insertion
-await expect(page.locator("[style*='block']")).toContainText('Incorrect');
+//await expect(page.locator("[style*='block']")).toContainText('Incorrect');
+
 
 } );
