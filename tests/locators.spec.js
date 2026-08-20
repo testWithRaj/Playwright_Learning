@@ -22,4 +22,9 @@ console.log(await page.locator(".card-body a").nth(1).textContent());
 //await expect(page.locator("[style*='block']")).toContainText('Incorrect');
 
 
+// how to grab all the products from the web page?
+
+const allTitles =await page.locator(".card-body a").allTextContents()
+console.log(allTitles);
+
 } );
