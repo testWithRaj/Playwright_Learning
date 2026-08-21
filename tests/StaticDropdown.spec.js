@@ -1,6 +1,6 @@
 const {test,expect}= require('@playwright/test')
 
-test('Test Login page using locator', async ({page}) =>   // test annotation coming from playwright dependencies
+test('UI Controls', async ({page}) =>   // test annotation coming from playwright dependencies
 
 {
 
@@ -10,6 +10,9 @@ console.log(await page.title());
 // two methods > type and fill >> type is deprecated so please use fill method
 await page.locator("input#username").fill("rahulshettyacademy");
 await page.locator("input#password").fill("Learning@830$3mK2");
+const dropdown=await page.locator("select.form-control");
+await dropdown.selectOption("consult");
+await page.pause();
 
 
 } )
