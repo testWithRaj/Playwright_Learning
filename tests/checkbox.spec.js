@@ -12,7 +12,12 @@ await page.locator("input#username").fill("rahulshettyacademy");
 await page.locator("input#password").fill("Learning@830$3mK2");
 await page.locator(".radiotextsty").last().click();
 await page.locator("#okayBtn").click();
-await page.pause();
+await expect(page.locator(".radiotextsty").last()).toBeChecked();
+console.log(await page.locator(".radiotextsty").last().isChecked());
+
+//assertion
+
+
 
 
 } )
